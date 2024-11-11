@@ -1,0 +1,20 @@
+{
+  "name": "uie2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx codeceptjs run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "appium": "^2.12.1",
+    "appium-xcuitest-driver": "^7.28.3",
+    "codeceptjs": "^3.6.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
