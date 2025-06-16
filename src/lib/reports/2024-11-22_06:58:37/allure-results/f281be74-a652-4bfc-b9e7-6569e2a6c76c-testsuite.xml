@@ -1,0 +1,67 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1732271420423' stop='1732271462199'>
+    <name>Performance Testing:</name>
+    <title>Performance Testing:</title>
+    <test-cases>
+        <test-case start='1732271420425' status='passed' stop='1732271435236'>
+            <name>Measure App Load Time</name>
+            <title>Measure App Load Time</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1732271433740' status='passed' stop='1732271435236'>
+                    <name>I wait for visible "You must sign in to charge"</name>
+                    <title>I wait for visible "You must sign in to charge"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1732271436006' status='passed' stop='1732271461152'>
+            <name>Measure Login Performance</name>
+            <title>Measure Login Performance</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1732271447605' status='passed' stop='1732271448899'>
+                    <name>I wait for visible "You must sign in to charge"</name>
+                    <title>I wait for visible "You must sign in to charge"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1732271448899' status='passed' stop='1732271450447'>
+                    <name>I append field {"android":"//*[@resource-id=\"Email\"]","ios":"//XCUIElementTypeTextField[@name=\"Email\"]"}, "pratihar+ev@itobuz.com"</name>
+                    <title>I append field {"android":"//*[@resource-id=\"Email\"]","ios":"//XCUIElementTypeTextField[@name=\"Email\"]"}, "pratihar+ev@itobuz.com"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1732271450447' status='passed' stop='1732271451896'>
+                    <name>I append field {"android":"//*[@resource-id=\"Password\"]","ios":"//XCUIElementTypeSecureTextField[@name=\"Password\"]"}, "Itobuz$1234"</name>
+                    <title>I append field {"android":"//*[@resource-id=\"Password\"]","ios":"//XCUIElementTypeSecureTextField[@name=\"Password\"]"}, "Itobuz$1234"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1732271451896' status='passed' stop='1732271453017'>
+                    <name>I click {"android":"android=new UiSelector().text(\"Sign In\")","ios":"//XCUIElementTypeOther[@name=\"Sign In\"]"}</name>
+                    <title>I click {"android":"android=new UiSelector().text(\"Sign In\")","ios":"//XCUIElementTypeOther[@name=\"Sign In\"]"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1732271453017' status='passed' stop='1732271461152'>
+                    <name>I see "Scan QR"</name>
+                    <title>I see "Scan QR"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

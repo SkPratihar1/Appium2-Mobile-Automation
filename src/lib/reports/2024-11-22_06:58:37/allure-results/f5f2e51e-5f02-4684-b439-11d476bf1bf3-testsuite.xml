@@ -1,0 +1,81 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1732267994235' stop='1732268036902'>
+    <name>Performance Testing:</name>
+    <title>Performance Testing:</title>
+    <test-cases>
+        <test-case start='1732267994238' status='failed' stop='1732268009024'>
+            <name>Measure App Load Time</name>
+            <title>Measure App Load Time</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1732268008019' status='failed' stop='1732268009023'>
+                    <name>I wait for visible "You must sign in to charge"</name>
+                    <title>I wait for visible "You must sign in to charge"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Main session - Last Seen Screenshot' source='86530237-0d27-4461-a4c7-fe4a9e30fe1e-attachment.png' type='image/png' size='123870'/>
+            </attachments>
+            <failure>
+                <message>element (android=new UiSelector().text("You must sign in to charge")) still not visible after 1 sec</message>
+                <stack-trace>Error: element (android=new UiSelector().text("You must sign in to charge")) still not visible after 1 sec
+                    at file:///Users/it062305/dev/project/EroEV-Mobile-Automation/uie2e/node_modules/webdriverio/build/commands/browser/waitUntil.js:39:23
+                    at async Browser.wrapCommandFn (file:///Users/it062305/dev/project/EroEV-Mobile-Automation/uie2e/node_modules/webdriverio/node_modules/@wdio/utils/build/shim.js:72:29)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1732268011390' status='failed' stop='1732268035244'>
+            <name>Measure Login Performance</name>
+            <title>Measure Login Performance</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1732268022937' status='passed' stop='1732268024139'>
+                    <name>I wait for visible "You must sign in to charge"</name>
+                    <title>I wait for visible "You must sign in to charge"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1732268024139' status='passed' stop='1732268025747'>
+                    <name>I append field {"android":"//*[@resource-id=\"Email\"]","ios":"//XCUIElementTypeTextField[@name=\"Email\"]"}, "pratihar+ev@itobuz.com"</name>
+                    <title>I append field {"android":"//*[@resource-id=\"Email\"]","ios":"//XCUIElementTypeTextField[@name=\"Email\"]"}, "pratihar+ev@itobuz.com"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1732268025747' status='passed' stop='1732268026897'>
+                    <name>I append field {"android":"//*[@resource-id=\"Password\"]","ios":"//XCUIElementTypeSecureTextField[@name=\"Password\"]"}, "Itobuz$1234"</name>
+                    <title>I append field {"android":"//*[@resource-id=\"Password\"]","ios":"//XCUIElementTypeSecureTextField[@name=\"Password\"]"}, "Itobuz$1234"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1732268026898' status='passed' stop='1732268028379'>
+                    <name>I click {"android":"android=new UiSelector().text(\"Sign In\")","ios":"//XCUIElementTypeOther[@name=\"Sign In\"]"}</name>
+                    <title>I click {"android":"android=new UiSelector().text(\"Sign In\")","ios":"//XCUIElementTypeOther[@name=\"Sign In\"]"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1732268028379' status='failed' stop='1732268035244'>
+                    <name>I see "Scan QR"</name>
+                    <title>I see "Scan QR"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Main session - Last Seen Screenshot' source='5782d3d6-996b-4115-8ce1-1b556a4524c9-attachment.png' type='image/png' size='123787'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

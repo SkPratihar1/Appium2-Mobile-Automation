@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx codeceptjs run",
+    "test": "codeceptjs run --steps",
+    "analyze": "ts-node src/lib/util/report/analyzeReports.ts",
+    "generate-report": "ts-node src/lib/util/report/generateHtmlReport.ts",
+    "analyze1": "ts-node ./src/lib/util/report/analyzeAllureResults.ts",
+    "report": "npm run analyze && npm run posttest",
+    "posttest": "ts-node ./src/lib/util/report/generateAllureReport.ts",
     "test-android": "npx codeceptjs run --config=codecept.conf.android.ts --steps",
     "test-ios": "npx codeceptjs run --config=codecept.conf.ios.ts --steps"
   },
@@ -12,12 +17,28 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
     "@types/node": "^22.9.0",
-    "appium": "^2.12.1",
-    "appium-uiautomator2-driver": "^3.8.2",
+    "appium-espresso-driver": "^3.5.1",
     "appium-xcuitest-driver": "^7.28.3",
-    "codeceptjs": "^3.6.7",
+    "chai": "^4.5.0",
+    "mocha": "^10.8.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "appium": "^2.12.1",
+    "appium-uiautomator2-driver": "^3.9.0",
+    "chart.js": "^4.4.6",
+    "codeceptjs": "^3.6.7",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "webdriverio": "^8.6.3",
+    "xml2js": "^0.6.2"
   }
 }

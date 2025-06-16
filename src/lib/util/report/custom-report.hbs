@@ -1,0 +1,114 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <p>Generated on: {{date}}</p>
+
+    <h2>Test Results</h2>
+    {{#each reports}}
+        <div>
+            <h3>Report for: {{this.reportName}}</h3>
+            <p>Status: {{this.status}}</p>
+            <p>Duration: {{this.duration}} seconds</p>
+        </div>
+    {{/each}}
+</body>
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .container { width: 80%; margin: 0 auto; }
+    h1 { text-align: center; }
+    .chart-container { width: 80%; margin: 0 auto; }
+    .test-list { margin-top: 20px; }
+    .test-list a { color: #007bff; text-decoration: none; cursor: pointer; }
+    .test-list a:hover { text-decoration: underline; }
+    .test-details { display: none; padding: 10px; border: 1px solid #ccc; margin-top: 10px; background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{{title}}</h1>
+    <p>Generated on: {{date}}</p>
+
+    <div class="chart-container">
+      <canvas id="testResultsChart"></canvas>
+    </div>
+
+    <h2>Test Results</h2>
+    <div class="test-list">
+      {{#each reports}}
+        <div class="test-scenario">
+          <a href="#" class="test-link" data-index="{{@index}}">{{this.name}} - Status: {{this.status}}</a>
+          <div class="test-details" id="details-{{@index}}">
+            <p>Status: {{this.status}}</p>
+            <p>Duration: {{this.duration}} seconds</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+  </div>
+
+  <script>
+    const ctx = document.getElementById('testResultsChart').getContext('2d');
+    const data = {
+      labels: ['Passed', 'Failed'],
+      datasets: [{
+        label: 'Test Results',
+        data: [
+          {{#each reports}} {{#if (eq this.status 'passed')}} 1 {{else}} 0 {{/if}} {{/each}},
+          {{#each reports}} {{#if (eq this.status 'failed')}} 1 {{else}} 0 {{/if}} {{/each}}
+        ],
+        backgroundColor: ['#28a745', '#dc3545'],
+        borderColor: ['#28a745', '#dc3545'],
+        borderWidth: 1
+      }]
+    };
+
+    const config = {
+      type: 'pie',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                return tooltipItem.label + ': ' + tooltipItem.raw + ' tests';
+              }
+            }
+          }
+        }
+      }
+    };
+
+    const testResultsChart = new Chart(ctx, config);
+
+    document.querySelectorAll('.test-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const index = e.target.getAttribute('data-index');
+        const detailsDiv = document.getElementById(`details-${index}`);
+        detailsDiv.style.display = detailsDiv.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

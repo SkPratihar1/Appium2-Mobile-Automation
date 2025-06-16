@@ -1,0 +1,25 @@
+[s[999C[999B[6n[u[H[J[?25l[H[J[s[999C[999B[6n[uTasks: 715 total,   1 running, 714 sleeping,   0 stopped,   0 zombie
+  Mem:      3.6G total,      3.5G used,       71M free,       67M buffers
+ Swap:      2.0G total,      510M used,      1.5G free,      1.5G cached
+800%cpu 172%user   3%nice  75%sys 528%idle   6%iow  16%irq   0%sirq   0%host
+[7m  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS            [0m
+19940 u0_a172      16  -4 8.0G  99M  55M S  150   2.6   0:00.58 com.eroev.app
+ 1818 system       18  -2 7.8G 165M  81M S 25.0   4.4   4:50.66 system_server
+[1m19971 shell        20   0  35M 2.7M 1.6M R 21.8   0.0   0:00.08 top -n 1[m
+  815 system       -2  -8 316M  13M 8.3M S 12.5   0.3   1:55.94 surfaceflinger
+   94 root         20   0    0    0    0 S  9.3   0.0   0:02.34 [system]
+ 3297 system       20   0  56M 2.3M 1.2M S  6.2   0.0   0:49.98 cnss_diag -q -f
+ 2880 u0_a116      20   0 6.4G 167M  89M S  6.2   4.4   2:10.08 com.google.andr+
+19890 u0_a163      20   0 5.1G  83M  27M S  3.1   2.2   0:01.62 io.appium.uiaut+
+19728 root         RT   0    0    0    0 D  3.1   0.0   0:00.13 [mdss_fb0]
+14906 root          0 -20    0    0    0 S  3.1   0.0   0:00.66 [kworker/u17:2]
+14856 shell        20   0 221M 6.8M 2.3M S  3.1   0.1   0:03.76 adbd --root_sec+
+ 3303 u0_a123      20   0 5.7G 102M  57M S  3.1   2.7   0:12.55 com.google.andr+
+ 3125 u0_a116      20   0 6.8G 168M  92M S  3.1   4.4   1:07.27 com.google.andr+
+ 2254 u0_a120      20   0 5.5G 149M  67M S  3.1   3.9   1:34.67 com.android.sys+
+  965 gps          20   0  73M 1.6M 1.1M S  3.1   0.0   0:00.03 loc_launcher
+  781 system       -3  -8 157M 3.6M 2.6M S  3.1   0.0   0:32.32 android.hardwar+
+  780 system       20   0  94M 2.0M 1.5M S  3.1   0.0   0:05.31 android.hardwar+
+  602 logd         30  10 179M 4.5M 1.2M S  3.1   0.1   0:17.26 logd
+  289 root         -3   0    0    0    0 S  3.1   0.0   0:06.85 [kgsl_worker_th+
+19875 shell        20   0 4.1G  52M  31M S  0.0   1.3   0:00.43 app_process /sy+[?25h[0m[1000;1H[K[?25h[?25h[0m[1000;1H[K

@@ -16,10 +16,10 @@ export const config: CodeceptJS.MainConfig = {
       appiumV2: true,
       platform: "iOS",
       device: "iPhone 12 mini",
-      app: "/Users/it062305/dev/project/EroEV-Mobile-Automation/Payload/EROEV.app",
+      app: "/Users/it062305/dev/project/EroEV-Mobile-Automation/ipa/Payload/EROEV.app",
       host: "127.0.0.1",
       port: 4723,
-      path: "/", //'/wd/hub',
+      path: '/wd/hub', //"/", //'/wd/hub',
       protocol: "http",
       desiredCapabilities: {
         platformName: "iOS",
@@ -31,10 +31,13 @@ export const config: CodeceptJS.MainConfig = {
         "appium:useNewWDA": true, // Ensures a new WebDriverAgent session
         "appium:wdaLaunchTimeout": 80000,
         "appium:app":
-          "/Users/it062305/dev/project/EroEV-Mobile-Automation/Payload/EROEV.app", //"/Users/it062305/dev/project/EroEV-Mobile-Automation/Payload/EROEV.app", // Path to .ipa for real device
+          "/Users/it062305/dev/project/EroEV-Mobile-Automation/ipa/Payload/EROEV.app", //"/Users/it062305/dev/project/EroEV-Mobile-Automation/Payload/EROEV.app", // Path to .ipa for real device
         "appium:udid": "00008101-001A24A01EE9003A", //FEBB7FEC-9584-4ABF-93BD-A162A2230105
         "appium:serialNumber": "C7CDX53D0GPX", // Ensure this matches the correct UDID
         "appium:bundleId": "com.eroev.app",
+        "appium:autoAcceptAlerts": true,
+        "appium:fullReset": true, // Ensures old app is uninstalled
+        "appium:noReset": false, 
       },
       // chromeOptions: {
       //   w3c: false,

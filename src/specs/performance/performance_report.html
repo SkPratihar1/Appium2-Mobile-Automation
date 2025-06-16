@@ -1,0 +1,131 @@
+
+    <html>
+      <head>
+        <title>App Performance Report</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+          }
+          h1 {
+            color: #0056b3;
+          }
+          .report-section {
+            margin-bottom: 20px;
+          }
+          pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+          }
+          .section-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Performance Report for App: com.eroev.app</h1>
+
+        <div class="report-section">
+          <div class="section-title">Memory Usage</div>
+          <pre>Applications Memory Usage (in Kilobytes):
+Uptime: 12770874 Realtime: 12770874
+
+** MEMINFO in pid 12825 [com.eroev.app] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap    22783    22740        0      142    23476    37380    23383     3515
+  Dalvik Heap     7578     7428        0      688     8360     9455     4728     4727
+ Dalvik Other     1578     1504        0        8     2144                           
+        Stack      496      496        0        0      500                           
+       Ashmem        2        0        0        0        8                           
+    Other dev       16        0       16        0      172                           
+     .so mmap     2733      200      188        2    35152                           
+    .jar mmap     1558        0      464        0    22244                           
+    .apk mmap     9723      196     8828        0    29232                           
+    .dex mmap    17923       12    17904        0    18008                           
+    .oat mmap      677        4       96        0    13648                           
+    .art mmap     1035      708       12       92    10964                           
+   Other mmap       85       68        0        0     1044                           
+      Unknown     2717     2712        0        0     2944                           
+        TOTAL    69836    36068    27508      932    69836    46835    28111     8242
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     8148                          19324
+         Native Heap:    22740                          23476
+                Code:    27892                         118456
+               Stack:      496                            500
+            Graphics:        0                              0
+       Private Other:     4300
+              System:     6260
+             Unknown:                                    6140
+ 
+           TOTAL PSS:    69836            TOTAL RSS:   167896       TOTAL SWAP PSS:      932
+ 
+ Objects
+               Views:       16         ViewRootImpl:        2
+         AppContexts:        5           Activities:        1
+              Assets:       15        AssetManagers:        0
+       Local Binders:       18        Proxy Binders:       33
+       Parcel memory:       11         Parcel count:       35
+    Death Recipients:        1      OpenSSL Sockets:        0
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      454
+  PAGECACHE_OVERFLOW:      144          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       96            100       11/79/13  /data/user/0/com.eroev.app/no_backup/androidx.work.workdb
+         4        8                         0/0/0    (attached) temp
+         4       96             32         2/15/3  /data/user/0/com.eroev.app/no_backup/androidx.work.workdb (3)
+ 
+ Asset Allocations
+    : 3821K
+</pre>
+        </div>
+
+        <div class="report-section">
+          <div class="section-title">CPU Usage</div>
+          <pre>[s[999C[999B[6n[u[H[J[?25l[H[J[s[999C[999B[6n[uTasks: 267 total,   1 running, 266 sleeping,   0 stopped,   0 zombie
+  Mem:  2028236K total,  1915248K used,   112988K free,   8658944 buffers
+ Swap:  1521172K total,   324352K used,  1196820K free,   847836K cached
+400%cpu  81%user   0%nice  78%sys 222%idle   0%iow  15%irq   4%sirq   0%host
+[7m   PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS           [0m
+ 12825 u0_a166      10 -10 1.3G 165M 113M S  159   8.3   0:00.72 com.eroev.app
+   350 system       -3  -8 145M 8.3M 4.7M S 14.8   0.4   0:12.02 surfaceflinger
+   504 system       18  -2 2.2G 237M 170M S 11.1  11.9  10:49.54 system_server
+[1m 12870 shell        20   0  13M 4.2M 3.5M R  7.4   0.2   0:00.02 top -n 1[m
+   309 system       -3  -4  84M 4.4M 3.1M S  7.4   0.2   0:40.86 android.hardwa+
+ 10353 root         20   0    0    0    0 I  3.7   0.0   0:00.05 [kworker/1:2-k+
+   663 u0_a144      20   0 1.3G 119M  87M S  3.7   6.0   6:10.91 com.android.sy+
+   205 root         20   0    0    0    0 S  3.7   0.0   0:03.01 [jbd2/dm-5-8]
+ 12779 u0_a160      20   0 1.2G 110M  65M S  0.0   5.5   0:00.58 io.appium.uiau+
+ 12764 shell        20   0 1.4G  82M  63M S  0.0   4.1   0:00.11 app_process /s+
+ 12663 shell        20   0  16M 3.0M 2.6M S  0.0   0.1   0:00.24 logcat -v thre+
+ 12548 root         20   0  24M 7.1M 6.3M S  0.0   0.3   0:00.07 apexd
+ 12446 u0_a108      20   0 1.2G  84M  68M S  0.0   4.2   0:00.05 com.google.pro+
+ 12089 u0_a113      20   0 1.2G  82M  66M S  0.0   4.1   0:00.07 com.google.and+
+ 11825 u0_a76       20   0 1.1G  67M  51M S  0.0   3.3   0:00.03 com.google.and+
+ 11759 u0_a107      20   0 1.2G  93M  75M S  0.0   4.6   0:00.13 com.google.and+
+ 11714 u0_a107      20   0 1.2G 118M 100M S  0.0   5.9   0:00.23 com.google.and+
+ 11682 u0_a117      20   0 1.9G 120M  89M S  0.0   6.0   0:00.41 com.google.and+
+ 11633 u0_a165      20   0 1.2G 111M  75M S  0.0   5.5   0:00.44 io.appium.sett+
+ 11538 system       20   0 1.1G  75M  60M S  0.0   3.8   0:00.03 com.android.ke+[?25h[0m[1000;1H[K[?25h[?25h[0m[1000;1H[K</pre>
+        </div>
+
+        <footer>
+          <p>Report generated at: 6/16/2025, 1:43:16 PM</p>
+        </footer>
+      </body>
+    </html>
+  
